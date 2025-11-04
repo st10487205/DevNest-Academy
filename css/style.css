@@ -33,8 +33,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-h2 {
-    color: whitesmoke; 
+h2 { 
     font-size: 40px; 
     margin-bottom: 15px;
     font-family: 'Courier New', Courier, monospace;
@@ -142,7 +141,7 @@ p{
 }
 
 .profile-card .left img {
-
+  width: 40vh;
   border-radius: 10px;
   height: auto;
   object-fit: cover;
@@ -238,145 +237,303 @@ p{
   font-style: italic;
 }
 
+.theme-toggle {
+    top: 1rem;
+    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 72px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-bottom: 15px;
+}
+
+.toggle-label .icon {
+  font-size: 20px;
+  z-index: 2;
+}
+
+.toggle-ball {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 30px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+#darkModeToggle {
+  display: none;
+}
+
+#darkModeToggle:checked + .toggle-label .toggle-ball {
+  transform: translateX(35px);
+}
+
+body.dark-mode {
+  background-color: rgba(245, 245, 245, 0.692);
+  color: black;}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode h2{
+    color: greenyellow;
+}
+
+body.dark-mode h3{
+    color: #d8e0e0;
+}
+
+body.dark-mode p{
+    color: #e5f2f3;
+}
+
 iframe{
   width: 80%;
 }
 
-/* ---------- TABLET / IPAD (768px and below) ---------- */
-@media (max-width: 1024px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 25px;
-  }
-
-  .profile-card, 
-  .info-card, 
-  .query-card {
-    flex-direction: column;
-    width: 90%;
-    text-align: center;
-  }
-
-  .profile-card .left img {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .sidebyside {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .block {
-    width: 80%;
-  }
-
-  .gallery .item {
-    width: 45%;
-    margin: 10px auto;
-    float: none;
-  }
-
-  iframe {
-    width: 90%;
-  }
+/* Mobile Devices */
+@media (max-width: 600px) {
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* ---------- MOBILE (600px and below) ---------- */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    text-align: center;
-    padding: 0 10px;
-  }
+nav {
+        flex-direction: column;
+        gap: 1rem;
+    } 
 
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+h1 {
+  font-family: 'Allura', cursive;
+  font-size: 2.5rem;
+  margin: 0 0 0.5em;
+}
 
-  nav a {
-    display: block;
-    padding: 8px 0;
-    font-size: 1rem;
-    border-bottom: 1px solid rgb(70, 70, 70);
-  }
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  margin-bottom: 0.75em;
+  color: greenyellow;
+}
 
-  h1 {
-    font-size: 32px;
-  }
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  text-align: center;
+}
 
-  h2 {
-    font-size: 25px;
-  }
+h6 {
+  font-size: 1.25rem;
+  margin: 0;
+}
 
-  h3 {
-    font-size: 20px;
-  }
+button {
+  padding: 0.75em 2em;
+  font-size: 1.1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
+button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px black;
+}
 
-  .sidebyside {
-    flex-direction: column;
-    align-items: center;
-  }
+section {
+  padding: 1em;
+  text-align: center;
+  background-color: #111;
+  color: white;
+}
 
-  .block {
-    width: 100%;
+p {
+  font-size: 1rem;
+  max-width: 90%;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.sidebyside {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block {
+  flex: 1 1 90%;
+  max-width: 90%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.block b {
+  font-size: 1.5rem;
+  font-family: cursive;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin: 1em;
+  text-align: left;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em auto;
+  gap: 1.25em;
+  padding: 1em;
+  border: 1px solid white;
+  border-radius: 0.75em;
+  max-width: 95%;
+  box-shadow: 0 4px 10px whitesmoke;
+}
+
+.profile-card .left img {
+  width: 80%;
+  max-width: 200px;
+  border-radius: 0.5em;
+  object-fit: cover;
+}
+
+.profile-card .right {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-card h3 {
+  margin: 0 0 0.5em;
+  font-size: 2rem;
+  color: gray;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.5em 0;
+  font-size: 1rem;
+  color: gray;
+}
+
+.contact-info img {
+  width: 2em;
+}
+
+.info-card,
+.query-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.25em auto;
+  padding: 1em;
+  border: 1px solid white;
+  border-radius: 0.75em;
+  box-shadow: 0 4px 10px whitesmoke;
+  width: 90%;
+  max-width: 400px;
+}
+
+.personal,
+.details {
+  text-align: left;
+  margin-left: 1em;
+}
+}
+
+/*Tablets (≥ 768px)*/
+@media (min-width: 768px) {
+  p {
+    font-size: 1.1rem;
+    max-width: 80%;
   }
 
   .profile-card {
-    flex-direction: column;
-    width: 95%;
-    padding: 15px;
+    flex-direction: row;
+    max-width: 90%;
+    text-align: left;
+  }
+
+
+
+  .block {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+
+}
+
+/* Desktops (≥ 1024px) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 60%;
+  }
+
+  .sidebyside {
+    gap: 2em;
+  }
+
+  .block {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  .profile-card {
+    max-width: 1000px;
+    padding: 2em;
+    gap: 2em;
   }
 
   .profile-card h3 {
-    font-size: 30px;
+    font-size: 3rem;
   }
 
-  .contact-info {
-    font-size: 16px;
-    flex-direction: column;
-    align-items: flex-start;
+  .info-card, .query-card {
+    max-width: 450px;
   }
 
-  .info-card,
-  .query-card {
-    width: 95%;
-  }
+  
 
-  .gallery .item {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  iframe {
-    width: 100%;
-  }
-
-  .personal,
-  .details {
-    margin-left: 20px;
-    text-align: left;
-  }
 }
