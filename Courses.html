@@ -36,6 +36,33 @@
            </div>
     </nav>
 
+    <section id="products" class="animate-fade-in">         
+            <div class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="search" 
+                        id="searchInput" 
+                        placeholder="Search courses or keywords..."
+                        aria-label="Search courses and keywords">
+                    
+                    <select id="filterSelect" aria-label="Filter by category">
+                        <option value="all">All Courses</option>
+                        <option value="fullstack">Full Stack</option>
+                        <option value="backend">Back-End</option>
+                        <option value="frontend">Front-End</option>
+                    </select>
+                    
+                    <select id="sortSelect" aria-label="Sort products">
+                        <option value="default">Sort By</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A-Z</option>
+                    </select>
+                </div>
+                <div class="search-stats" id="searchStats"></div>
+            </div>
+           
+
     <h2 style="font-family: 'Courier New', Courier, monospace;">Explore Our Courses</h2>
 
     <!--Blocks of the courses, languages, duration and price-->

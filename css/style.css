@@ -27,6 +27,14 @@ nav a:hover {
   border-bottom: 0.1px solid greenyellow;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+}
+
 h1 {
     font-family: 'Allura', cursive;
     font-size: 50px;
@@ -327,6 +335,56 @@ iframe{
   width: 80%;
 }
 
+/* SEARCH FUNCTIONALITY */
+.search-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 50px;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #49527c;
+}
+
+#sortSelect, #filterSelect {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sortSelect:hover, #filterSelect:hover {
+    border-color: #1b1c22;
+}
+
+.search-stats {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
 /* Mobile Devices */
 @media (max-width: 600px) {
 body {
@@ -338,12 +396,38 @@ body {
   padding: 0;
 }
 
-nav {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-        align-items: center;
-    } 
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(39, 38, 38);
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block; /* show ☰ icon */
+    right: 0;
+  }
+
+  nav {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(39, 38, 38);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #555;
+  }
+
+  nav.show {
+    display: flex; /* show menu when toggled */
+  }
 
 h1 {
   font-family: 'Allura', cursive;
