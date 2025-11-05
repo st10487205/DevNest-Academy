@@ -1,8 +1,3 @@
-function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-
     
     document.addEventListener("DOMContentLoaded", () => {
       const toggle = document.getElementById("darkModeToggle");
@@ -71,13 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Menu Toggle*/
-const menuToggle = document.getElementById('menu-toggle');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
 
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
-
-    // Optional: toggle hamburger icon to X
     menuToggle.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
   });
+});
+
       
