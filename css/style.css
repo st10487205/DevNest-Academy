@@ -304,18 +304,13 @@ body.dark-mode p{
     color: black;
 }
 
-body.dark-mode section{
+body.dark-mode section, body.dark-mode nav{
     background-color: #f0f0c0;
     color: black;
 }
 
 body.dark-mode header{
     background-color: #d4d4aa;
-    color: black;
-}
-
-body.dark-mode nav {
-    background-color: #f0f0c0;
     color: black;
 }
 

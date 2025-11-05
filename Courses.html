@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="css/style.css">
    <script src="js/search.js"></script>
    <script src="js/script.js"></script>
+   <script src="js/dynamic_content.js"></script>
 
        <!--Links for icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +18,6 @@
 
     <div><img src="images/DevNest Logo.jpeg" alt="DevNest Academy Logo" width="75"><h1>DevNest Academy</h1></div>
 
-     <!--Navigation Menu-->
     <!--Navigation menu-->
     <header>
       <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -41,117 +41,35 @@
       </nav>
     </header>
 
-    <section id="products" class="animate-fade-in">         
-            <div class="search-section">
-                <div class="search-container">
-                    <input 
-                        type="search" 
-                        id="searchInput" 
-                        placeholder="Search courses or keywords..."
-                        aria-label="Search courses and keywords">
-                    
-                    <select id="filterSelect" aria-label="Filter by category">
-                        <option value="all">All Courses</option>
-                        <option value="fullstack">Full Stack</option>
-                        <option value="backend">Back-End</option>
-                        <option value="frontend">Front-End</option>
-                    </select>
-                    
-                    <select id="sortSelect" aria-label="Sort products">
-                        <option value="default">Sort By</option>
-                        <option value="price-low">Price: Low to High</option>
-                        <option value="price-high">Price: High to Low</option>
-                        <option value="name">Name: A-Z</option>
-                    </select>
-                </div>
-                <div class="search-stats" id="searchStats"></div>
-            </div>
-           
-
-    <h2 style="font-family: 'Courier New', Courier, monospace;">Explore Our Courses</h2>
-
-    <!--Blocks of the courses, languages, duration and price-->
-    <div class="sidebyside">
-        <div class="block"> 
-             <h3>Full Stack Development</h3>
-            <ul>
-                <li>Languages: JavaScript, HTML, CSS, TypeScript, Front-end Framework & Libraries</li>
-                <li>Additional: Version Control, Build Tools, Testing Tools & Browser Dev Tools</li>
-                <li>Duration: 12 Months</li>
-                <li>Method of learning: Remote learning</li>
-                    <br>
-                <i>Students will also be trained on how to use AI tools properly</i>
-                     <br>
-                <b style="font-size: 25px; font-family:cursive">Price : R24 495</b>
-                   
-            </ul>
-        </div>
-
-        <div class="block"> 
-            <h3>Back-End Development</h3> 
-            <ul>
-                <li>Languages: Java Script, Python, C#, PHP & Ruby, GoLang</li>
-                <li>Additional: SQL, Cloud Platforms, Version Control & DevOps</li>
-                <li>Duration: 6 Months</li>
-                <li>Method of learning: Remote learning</li>
-                    <br>
-                <i>Students will also be trained on how to use AI tools properly</i>
-                     <br>
-                <b style="font-size: 25px; font-family:cursive">Price : R14 495</b>
-                   
-            </ul>
-        </div>
-
-        <div class="block"> 
-             <h3>Front-End Development</h3>
-            <ul>
-                <li>Languages: JavaScript, HTML, CSS, TypeScript, Front-end Framework & Libraries</li>
-                <li>Additional: Version Control, Build Tools, Testing Tools & Browser Dev Tools</li>
-                <li>Duration: 6 Months</li>
-                <li>Method of learning: Remote learning</li>
-                     <br>
-                <i>Students will also be trained on how to use AI tools properly</i>
-                     <br>
-                <b style="font-size: 25px; font-family:cursive">Price : R14 495</b>
-                   
-            </ul>
-        </div>
+    <!-- Search Section -->
+  <section id="products">
+    <div class="search-section">
+      <div class="search-container">
+        <input type="search" id="searchInput" placeholder="Search courses or keywords..." aria-label="Search courses and keywords">
+        <select id="filterSelect" aria-label="Filter by category">
+          <option value="all">All Courses</option>
+          <option value="fullstack">Full Stack</option>
+          <option value="backend">Back-End</option>
+          <option value="frontend">Front-End</option>
+        </select>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="default">Sort By</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A-Z</option>
+        </select>
+      </div>
+      <div class="search-stats" id="searchStats"></div>
     </div>
 
-    <h2 style="font-family: 'Courier New', Courier, monospace;">Explore Our Booster Courses</h2>
+    <h2>Explore Our Courses</h2>
+    <div id="mainCoursesContainer" class="sidebyside"></div>
 
-    <div class="sidebyside">
+    <h2>Explore Our Booster Courses</h2>
+    <div id="boosterCoursesContainer" class="sidebyside"></div>
+  </section>
 
-        <div class="block"> 
-             <h3>Booster Back-End Development</h3>
-            <ul>
-                <li>Languages: Python, C# & PHP</li>
-                <li>Additional: Version Control, Build Tools, Testing Tools & Browser Dev Tools</li>
-                <li>Duration: 3 Months</li>
-                <li>Method of learning: Remote learning</li>
-                    <br>
-                <i>Students will also be trained on how to use AI tools properly</i>
-                     <br>
-                <b style="font-size: 25px; font-family:cursive">Price : R7 499</b>
-                   
-            </ul>
-        </div>
-
-        <div class="block"> 
-             <h3>Booster Front-End Development</h3>
-            <ul>
-                <li>Languages: JavaScript, HTML & CSS</li>
-                <li>Additional: Version Control, Build Tools, Testing Tools & Browser Dev Tools</li>
-                <li>Duration: 3 Months</li>
-                <li>Method of learning: Remote learning</li>
-                    <br>
-                <i>Students will also be trained on how to use AI tools properly</i>
-                     <br>
-                <b style="font-size: 25px; font-family:cursive">Price : R7 499</b>
-                   
-            </ul>
-        </div>
-      </div>
+    <br>
 
     <!--Big APPLY NOW button-->
     <br><br><br>
@@ -160,7 +78,7 @@
     </a>
     <br><br><br>
     <!--Logos of the languages mentioned above-->
-    <img src="images/languages.avif" alt="programming languages" width="90%" height="auto">
+    <img src="images/languages.avif" alt="programming languages" width="50%" height="auto">
 
     <br><br>
     
