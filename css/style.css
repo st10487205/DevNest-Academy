@@ -237,7 +237,11 @@ p{
   object-fit: cover;
   display: block;
   border-radius: 6px;
-  
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .gallery p {
