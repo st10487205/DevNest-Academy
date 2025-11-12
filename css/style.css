@@ -151,7 +151,7 @@ p{
 }
 
 .profile-card .left img {
-  width: 35vh;
+  width: 75%;
   border-radius: 10px;
   height: auto;
   object-fit: cover;
@@ -229,26 +229,44 @@ p{
   box-sizing: border-box;
   text-align: center; 
   margin-left: 15px;
+  position: relative; /* enables overlay positioning */
+  border-radius: 6px;
+  overflow: hidden; /* keep overlay within image bounds */
 }
 
+/* Image */
 .gallery img {
   width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
   border-radius: 6px;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
   transition: transform 0.3s ease;
 }
 
-.gallery p {
-  margin-top: 6px;
-  font-size: 0.9rem;
-  color: white;
-  font-style: italic;
+/* White gradient overlay text */
+.gallery .item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 20px 10px;
+  color: #000; /* text color darker for contrast */
+  font-weight: bold;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Hover effects */
+.gallery .item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery .item:hover p {
+  opacity: 1;
 }
 
 .theme-toggle {
