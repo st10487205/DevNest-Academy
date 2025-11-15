@@ -76,4 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-      
+function validateForm(){
+    const email = document.getElementById("email").value;
+    const error = document.getElementById("error");
+    
+    if(!email.includes("@")){
+        error.innerText = "Please enter a valid email.";
+        return false;
+    }
+    error.innerText = "";
+    alert("Form submitted!");
+    return true;
+}     
