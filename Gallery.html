@@ -9,7 +9,9 @@
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
     
 <body>
     <div><img src="images/DevNest Logo.jpeg" alt="DevNest Academy Logo" width="75"><h1>DevNest Academy</h1></div>
@@ -41,18 +43,17 @@
     <div class="gallery">
 
       <h1>Class of 2023</h1>
-
-        <div class="item">
-            <img src="images/graduate.jpg" alt="graduatepicture">
-            <p>Graduated in Full-Stack development</p>            
-        </div>
-    
-        <div class="item">
+         <div class="item" onclick="openLightbox('images/graduate.jpg', 'Ecstatic Graduate')">
+                <img src="images/graduate.jpg" alt="Hair style1">
+                <p>Graduated in Full-Stack development</p>
+         </div>
+ 
+        <div class="item" onclick="openLightbox('images/front-end-buddies.jpg', 'Front-End Buddies')">
             <img src="images/front-end-buddies.jpg" alt="front-end-buddies" >
             <p>Graduated in Front-End development</p>
         </div>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/GroupOfGraduates.jpg', 'Back-End Buddies')">
             <img src="images/GroupOfGraduates.jpg" alt="back-end-buddies">
             <p>Graduated in Back-End development</p>
         </div>
@@ -62,17 +63,17 @@
 
         <h1>Class of 2022</h1>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/same-town-friends.jpg', 'Hometown Buddies')">
             <img src="images/same-town-friends.jpg" alt="hometown-buddies">
             <p>Graduated in Full-Stack development</p>
         </div>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/back-end-buddies.jpg', 'Coding Buddies')">
             <img src="images/back-end-buddies.jpg" alt="coding-buddies">
             <p>Graduated in Back-End development</p>
         </div>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/a-students.jpg', 'A-Students')">
             <img src="images/a-students.jpg" alt="graduation-day">
             <p>Graduated in Front-End development</p>
         </div>        
@@ -82,22 +83,32 @@
 
         <h1>Class of 2021</h1>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/graduates.jpeg', 'Coding Besties')">
             <img src="images/graduates.jpeg" alt="coding-besties">
             <p>Graduated in Full-Stack development</p>
         </div>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/genius.jpeg', 'Happy Graduate')">
             <img src="images/genius.jpeg" alt="happy-graduate">
             <p>Graduated in Back-End development</p>
         </div>
 
-        <div class="item">
+        <div class="item" onclick="openLightbox('images/female-graduate.jpg', 'Smiling Graduate')">
             <img src="images/female-graduate.jpg" alt="smiling-graduate">
             <p>Graduated in Front-End development</p>
         </div>
     </div>
-
+    
+<!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+            <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+        </div>
 
     <br><br><br>
     &copy; 2025 DevNest Academy
