@@ -13,9 +13,15 @@ README For my Website (DevNest Academy)
 
     [Done] - 2025-11-14
 
+
     [Done] - 2025-11-13
+        Added images on the gallery page
+        Added animations for the images
+        Changed the headings on the Gallery page
 
     [Done] - 2025-11-12
+        Fixed the navigation bar on mobile view
+        Changed colour scheme on light mode
 
     [Done] - 2025-10-27
         Changed from images to icons(Social Media)
