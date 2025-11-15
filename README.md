@@ -9,6 +9,14 @@ README For my Website (DevNest Academy)
              - Desktops or laptops are default (greater or equal to 1024px)
 
  Changelog:
+    [Done] - 2025-11-15
+
+    [Done] - 2025-11-14
+
+    [Done] - 2025-11-13
+
+    [Done] - 2025-11-12
+
     [Done] - 2025-10-27
         Changed from images to icons(Social Media)
         Added Booster courses
