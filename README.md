@@ -10,9 +10,19 @@ README For my Website (DevNest Academy)
            Part 3(html, css and javascript)
 
  Changelog:
+    [Done] - 2025-11-18
+        Added  form validartion for application form
+        Added form validation for query form
+        Fixed lightbox/slideshow
+        Final touchups before submission 
+
     [Done] - 2025-11-15
+        Created validation.js
+        Edited CSS for the query form
+        Email processor 
 
     [Done] - 2025-11-14
+        Added SEO Tags
 
 
     [Done] - 2025-11-13
