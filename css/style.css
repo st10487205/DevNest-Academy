@@ -151,7 +151,7 @@ p{
 }
 
 .profile-card .left img {
-  width: 75%;
+  width: 65%;
   border-radius: 10px;
   height: auto;
   object-fit: cover;
@@ -174,11 +174,6 @@ p{
   margin: 8px 0;
   font-size: 20px;
   color: gray;
-}
-.contact-info img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
 }
 
 .info-card {
@@ -214,7 +209,7 @@ p{
 
 .details{ 
   text-align: left;
-  margin-left: 90px;  
+  margin-left: 60px;  
 }
 
 .gallery {

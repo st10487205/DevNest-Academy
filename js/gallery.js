@@ -58,3 +58,23 @@
                 closeLightbox();
             }
         });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all your gallery items (the <a> or <div> wrappers around the images)
+    const galleryItems = document.querySelectorAll('.gallery .item');
+
+    galleryItems.forEach((item, index) => {
+        // Assuming you have an <img> element inside the .item
+        const imgElement = item.querySelector('img'); 
+        
+        // Use the image data from your 'images' array for consistency
+        const imageData = images[index];
+
+        if (imgElement && imageData) {
+            item.addEventListener('click', () => {
+                // Call the function, passing the specific image source and caption
+                openLightbox(imageData.src, imageData.caption);
+            });
+        }
+    });
+});

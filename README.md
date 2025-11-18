@@ -7,6 +7,7 @@ README For my Website (DevNest Academy)
              -Mobile Devices with a screen size of less than 768px
              -Tablets or iPads with a screen size of 768 px or more
              - Desktops or laptops are default (greater or equal to 1024px)
+           Part 3(html, css and javascript)
 
  Changelog:
     [Done] - 2025-11-15
@@ -66,13 +67,6 @@ README For my Website (DevNest Academy)
         Reviwed Part 1 feedback and planned Part 2
 
 References:
-    Logos
-        - Instagram (https://commons.wikimedia.org/wiki/File:Instagram_icon.png)
-        - Phone (citypng.com/photo/21068/download-black-old-telephone-phone-icon-png)
-        - Mail (https://pngtree.com/freepng/email-icon-design_5571212.html)
-        - LinkedIn (https://commons.wikimedia.org/wiki/File:LinkedIn_logo_initials.png)
-        - X (https://za.pinterest.com/pin/twitter-x-icon-png--599401031684783160/)
-
     Responsive Design (Media Queries)
         - StackOverFlow (https://stackoverflow.com/questions/15061520/responsive-css-styles-on-mobile-devices-only)
 
@@ -81,6 +75,8 @@ References:
 
     Photos
         - Graduate Pictures (https://www.istockphoto.com/photos/we-are-finally-graduates)
+                            (https://www.istockphoto.com/search/2/image-film?phrase=graduation+portrait)
+                            (https://www.pexels.com/search/graduation/)
 
 Responsive Design
     - Mobile Devices 
